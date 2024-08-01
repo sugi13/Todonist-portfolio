@@ -1,0 +1,14 @@
+ const ExitAll = () => {
+    signOut(auth).then(() => {
+      navigate('/');
+      localStorage.clear(); 
+      location.reload();
+
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
+            <div className="log-out-btn">
+            <button onClick={SignOutFromApp} className="flex items-center gap-1 text-xs"><SignOut size={15}/>Sign out</button>
+          </div>

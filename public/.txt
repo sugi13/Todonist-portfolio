@@ -1,0 +1,21 @@
+1. React-router-dom
+2. tailwind
+3. firebase
+4. formik
+5. akar icons
+6. framer motion
+
+
+ const validateSchema = Yup.object({
+    name: Yup.string().required('user name is required'),
+    email: Yup.string()
+      .required("email is required")
+      .email("Email is not valid"),
+    password: Yup.string()
+      .required("password is required")
+      .min(8, "password must be 8 characters long"),
+    confirmPassword: Yup.string()
+      .required('please re type password')
+      .oneOf([ref('password')], 'password does not match')
+
+  });
